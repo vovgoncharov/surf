@@ -1,2 +1,207 @@
-@import 'reset';
-@import 'variable;
+@import "reset";
+@import "variable";
+@import "header";
+
+.header {
+    position: relative;
+    height: 100vh;
+
+    .header__aside {
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        left: 0;
+        max-width: 168px;
+        border-right: 1px solid #979797;
+        height: 100vh;
+
+        .menu {
+            padding-top: 10px;
+
+            .menu__list {
+
+                .menu__list-item {
+                    text-align: center;
+
+                    span {
+                        margin-top: 6px;
+                        display: block;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 14px;
+                        letter-spacing: 3px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+
+        .header__search {
+            margin-top: 17px;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .header__date {
+            margin-top: 17px;
+            font-weight: 800;
+            font-size: 72px;
+            line-height: 64px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-align: center;
+
+            p {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+                letter-spacing: 1.4px;
+                color: #FFFFFF;
+            }
+
+        }
+
+        .header__location {
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+
+            .header__location-text {
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 1.05px;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .header__map {
+        position: absolute;
+        z-index: 3;
+        right: 0;
+        top: 0;
+
+        .line-animation {
+            stroke-dashoffset: 600;
+            stroke-dasharray: 600;
+            animation: anim-line 5s infinite 6s;
+        }
+
+        @keyframes anim-line {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    }
+
+    .header__arrows {
+        position: absolute;
+        z-index: 5;
+        left: 209px;
+        bottom: 41px;
+    }
+
+    .header__title {
+        font-weight: 800;
+        font-size: 200px;
+        line-height: 156px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.07;
+        max-width: 467px;
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        left: 0;
+    }
+
+    .header__slider {
+        &-item {
+            height: 100vh;
+            background: url(../../img/bg_1.jpg) no-repeat center top/cover;
+            position: relative;
+
+            .slider-item__info {
+                position: absolute;
+                right: 88px;
+                bottom: 116px;
+                text-align: right;
+                color: #fff;
+
+                .slider__info-subtitle {
+                    margin-bottom: 5px;
+                }
+
+                .slider__info-suptext {
+                    margin-bottom: 8px;
+                }
+
+                .slider__info-text {
+                    font-weight: 800;
+                    font-size: 40px;
+                    line-height: 50px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .slider-arrows {
+            position: absolute;
+            top: 40px;
+            right: 80px;
+            cursor: pointer;
+            z-index: 4;
+        }
+
+        .slider-arrows__left {
+            right: 125px;
+        }
+    }
+
+    .slider-dots {
+        position: absolute;
+        right: 60px;
+        bottom: 40px;
+        max-width: 920px;
+        width: 100%;
+
+        .slider-dots__item {
+            .dots-box {
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 4px solid #fff;
+                padding-top: 6px;
+
+                .dots-box__number {
+                    color: #fff;
+                    font-weight: 800;
+                    font-size: 24px;
+                    line-height: 34px;
+                    text-transform: uppercase;
+                }
+
+                .dots-box__name {
+                    color: #fff;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+        }
+
+        .slick-current {
+            .dots-box {
+                border-top: 4px solid $green;
+            }
+        }
+    }
+}

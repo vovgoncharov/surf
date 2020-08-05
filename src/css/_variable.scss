@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.suptitle-left {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.5;
+    position: relative;
+    padding-left: 103px;
+    display: inline-block;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 1px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        top: 50%;
+        left: 0;
+    }
+}
+
+.slider__info-title {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 86px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 48px;
+}
+
+$green: #4AF6CD;
